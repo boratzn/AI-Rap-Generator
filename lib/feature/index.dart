@@ -1,0 +1,12 @@
+export 'beats/view/beats_view.dart';
+export 'home/view/home_view.dart';
+export 'inapp/view/in_app_view.dart';
+export 'onboarding/view/on_boarding.dart';
+export 'song_creator/view/song_creator_view.dart';
+export 'prompt/view/generating_lyrics_view.dart';
+export 'prompt/view/lyrics_view.dart';
+export 'prompt/view/prompt_view.dart';
+export 'prompt/view/edit_lyrics_view.dart';
+export 'rapper/view/rapper_view.dart';
+export 'generating_song/view/generating_song_view.dart';
+export 'settings/view/settings_view.dart';
