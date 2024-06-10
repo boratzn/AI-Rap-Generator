@@ -20,7 +20,8 @@ migrate_working_dir/
 
 # Custom directories
 lib/product/utility/constants/api_constants/
-/assets/images/
+assets/images/
+
 
 # The .vscode folder contains launch configuration and tasks you configure in
 # VS Code which you may wish to be included in version control, so this line
