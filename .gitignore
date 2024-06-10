@@ -18,8 +18,6 @@ migrate_working_dir/
 
 *.env
 
-# Custom directories
-lib/product/utility/constants/api_constants/
 
 
 # The .vscode folder contains launch configuration and tasks you configure in
@@ -36,6 +34,7 @@ lib/product/utility/constants/api_constants/
 .pub-cache/
 .pub/
 /build/
+/lib/product/utility/constants/api_constants/
 
 # Symbolication related
 app.*.symbols
