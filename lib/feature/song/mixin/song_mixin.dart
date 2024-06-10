@@ -11,6 +11,36 @@ mixin SongMixin<T extends StatefulWidget> on State<T> {
   Duration audioDuration = Duration.zero;
 
   @override
+  void initState() {
+    super.initState();
+    player.onPlayerStateChanged.listen(
+      (PlayerState state) {
+        if (mounted) {
+          setState(() {
+            playerState = state;
+          });
+        }
+      },
+    );
+
+    player.onDurationChanged.listen(
+      (Duration duration) {
+        audioDuration = duration;
+      },
+    );
+
+    player.onPositionChanged.listen(
+      (Duration p) {
+        if (mounted) {
+          setState(() {
+            currentPosition = p;
+          });
+        }
+      },
+    );
+  }
+
+  @override
   void dispose() {
     super.dispose();
     player.release();

@@ -15,7 +15,7 @@ class SongBloc extends Bloc<SongEvent, SongState> {
             event.backingTrackUuid, event.voiceModelUuid, event.lyricsData);
         emit(SongLoaded(song: song));
       } catch (e) {
-        print(e.toString());
+        emit(SongError(message: e.toString()));
       }
     });
   }

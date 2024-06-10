@@ -1,4 +1,4 @@
-import 'package:ai_rap_generator/feature/home/view/home_view.dart';
+import 'package:ai_rap_generator/feature/index.dart';
 import 'package:ai_rap_generator/feature/onboarding/mixin/onboarding_mixin.dart';
 import 'package:ai_rap_generator/feature/onboarding/viewmodel/onboarding_viewmodel.dart';
 import 'package:ai_rap_generator/product/index.dart';
@@ -60,8 +60,7 @@ class _OnBoardingState extends State<OnBoardingView> with OnbOardingMixin {
                         await SharedPreferences.getInstance();
                     await prefs.setBool('seenOnboarding', true);
                     await prefs.setInt('freeTrial', 2);
-                    Navigation.pushReplace(
-                        context: context, page: HomePageView());
+                    Navigation.pushReplace(context: context, page: InAppView());
                   }
                   pageController.nextPage(
                       duration: Duration(milliseconds: 500),

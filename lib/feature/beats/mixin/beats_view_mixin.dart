@@ -21,6 +21,9 @@ mixin BeatsViewMixin<T extends StatefulWidget> on State<T> {
       currentIndex = index;
       selectedBeat = beat;
     });
-    await player.play(UrlSource(beat.url));
+  }
+
+  Future<void> play(String url) async {
+    await player.play(UrlSource(url));
   }
 }

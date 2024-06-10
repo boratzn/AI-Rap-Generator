@@ -16,6 +16,14 @@ mixin PromptViewMixin<T extends StatefulWidget> on State<T> {
     return setState(() {
       currIndex = index;
       poem = poemList[index];
+      containerIdx = -1;
+    });
+  }
+
+  void clickContainer(int index) {
+    return setState(() {
+      controller.text = poem;
+      containerIdx = index;
     });
   }
 

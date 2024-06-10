@@ -1,10 +1,9 @@
 import 'package:ai_rap_generator/feature/generating_song/view/generating_song_view.dart';
 import 'package:ai_rap_generator/feature/rapper/mixin/rapper_view_mixin.dart';
-import 'package:ai_rap_generator/product/customs/custom_texts/custom_textstyles.dart';
 import 'package:ai_rap_generator/product/index.dart';
 import 'package:ai_rap_generator/product/navigation/navigation_service.dart';
 import 'package:ai_rap_generator/product/providers/lyric_provider.dart';
-import 'package:ai_rap_generator/product/widgets/rapper/image_widget.dart';
+import 'package:ai_rap_generator/product/widgets/rapper/custom_rapper_card.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -64,68 +63,7 @@ class _RapperViewState extends State<RapperView> with RapperViewMixin {
                             changeState(index);
                             selectRapper(rapper);
                           },
-                          child: Stack(
-                            children: [
-                              selectedRapperIndex == index
-                                  ? Positioned.fill(
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                            gradient: premiumGradient,
-                                            borderRadius:
-                                                BorderRadius.circular(13)),
-                                      ),
-                                    )
-                                  : Container(),
-                              Positioned.fill(
-                                top: 4,
-                                bottom: 4,
-                                left: 4,
-                                right: 4,
-                                child: NetworkImageWithPlaceholder(
-                                  imageUrl: rapper.imageUrl!,
-                                  placeholder: AssetImage(
-                                      Assets.images.songs.imgGenerator1.path),
-                                ),
-                              ),
-                              Positioned.fill(
-                                top: 4,
-                                bottom: 4,
-                                left: 4,
-                                right: 4,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                      color: Colors.black.withOpacity(0.55),
-                                      borderRadius: BorderRadius.circular(13)),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Align(
-                                  alignment: Alignment.bottomCenter,
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Expanded(
-                                        child: Text(
-                                          rapper.displayName!,
-                                          style: CustomTextStyles
-                                              .textStyleS17W900
-                                              .copyWith(color: Colors.white),
-                                        ),
-                                      ),
-                                      InkWell(
-                                        onTap: () =>
-                                            play(rapper.sampleUrl![0].url!),
-                                        child: Image.asset(Assets
-                                            .images.rapper.imgPlayRapper.path),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
+                          child: CustomRapperCard(rapper: rapper, index: index),
                         );
                       },
                     ),

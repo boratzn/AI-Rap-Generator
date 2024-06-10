@@ -75,7 +75,10 @@ class _BeatsViewState extends State<BeatsView> with BeatsViewMixin {
                                         Assets.images.beats.btnPause.path)
                                     : Image.asset(
                                         Assets.images.beats.btnPlayBeats.path),
-                                onTap: () => changeState(index, beat),
+                                onTap: () {
+                                  changeState(index, beat);
+                                  play(beat.url);
+                                },
                               ),
                               isIndexEqual
                                   ? SizedBox(

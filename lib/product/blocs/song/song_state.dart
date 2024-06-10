@@ -13,4 +13,8 @@ final class SongLoaded extends SongState {
   SongLoaded({required this.song});
 }
 
-final class SongError extends SongState {}
+final class SongError extends SongState {
+  final String message;
+
+  SongError({required this.message});
+}

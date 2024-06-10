@@ -93,32 +93,36 @@ class _PromptViewState extends State<PromptView> with PromptViewMixin {
                 crossAxisCount: 2,
                 children: List.generate(
                   4,
-                  (index) => Padding(
-                    padding: const EdgeInsets.all(5.0),
-                    child: GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          controller.text = poem;
-                        });
-                      },
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(13)),
-                        child: Padding(
-                          padding: const EdgeInsets.only(
-                              left: 15, right: 15, bottom: 15),
-                          child: Center(
-                            child: Text(
-                              poem,
-                              style: CustomTextStyles.textStyleS17W400,
-                              textAlign: TextAlign.center,
+                  (index) {
+                    var isIndexEqual = containerIdx == index;
+                    return Padding(
+                      padding: const EdgeInsets.all(5.0),
+                      child: GestureDetector(
+                        onTap: () {
+                          clickContainer(index);
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                              border: isIndexEqual
+                                  ? Border.all(
+                                      color: Color(0xFFF35C70), width: 2)
+                                  : null,
+                              borderRadius: BorderRadius.circular(13)),
+                          child: Padding(
+                            padding: const EdgeInsets.only(
+                                left: 15, right: 15, bottom: 15),
+                            child: Center(
+                              child: Text(
+                                poem,
+                                style: CustomTextStyles.textStyleS17W400,
+                                textAlign: TextAlign.center,
+                              ),
                             ),
                           ),
                         ),
                       ),
-                    ),
-                  ),
+                    );
+                  },
                 ),
               ),
               context.mediumHeightSB,

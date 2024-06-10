@@ -1,6 +1,5 @@
 import 'package:ai_rap_generator/feature/settings/view/settings_view.dart';
 import 'package:ai_rap_generator/feature/song_creator/mixin/song_view_mixin.dart';
-import 'package:ai_rap_generator/product/blocs/hive/hive_bloc.dart';
 import 'package:ai_rap_generator/product/index.dart';
 import 'package:ai_rap_generator/product/navigation/navigation_service.dart';
 import 'package:ai_rap_generator/product/widgets/song_view/custom_fab.dart';

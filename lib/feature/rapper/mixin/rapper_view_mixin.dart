@@ -7,6 +7,7 @@ mixin RapperViewMixin<T extends StatefulWidget> on State<T> {
   int currentIndex = -1;
   bool isClicked = false;
   int selectedRapperIndex = -1;
+  int playingIndex = -1;
   late VoiceModel selectedRapper;
 
   void changeState(int index) async {
@@ -17,8 +18,32 @@ mixin RapperViewMixin<T extends StatefulWidget> on State<T> {
     });
   }
 
-  void play(String beat) async {
+  void setPlayingIndex(int index) {
+    setState(() {
+      playingIndex = index;
+    });
+  }
+
+  Future<void> play(String beat) async {
     await player.play(UrlSource(beat));
+  }
+
+  Future<void> stop() async {
+    await player.stop();
+  }
+
+  void playAndPause(String songUrl) {
+    if (isClicked) {
+      setState(() {
+        stop();
+        isClicked = false;
+      });
+    } else {
+      setState(() {
+        play(songUrl);
+        isClicked = true;
+      });
+    }
   }
 
   void selectRapper(VoiceModel rapper) {
