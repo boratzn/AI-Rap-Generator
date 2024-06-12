@@ -13,12 +13,12 @@ mixin HomeViewMixin<T extends StatefulWidget> on State<T> {
     int count = prefs.getInt('freeTrial') ?? 2;
     bool isPremium = prefs.getBool('isPremium') ?? false;
     if (isPremium) {
-      Navigation.push(context: context, page: PromptView());
+      Navigation.push(page: PromptView());
     } else {
       if (count > 0) {
-        Navigation.push(context: context, page: PromptView());
+        Navigation.push(page: PromptView());
       } else {
-        Navigation.push(context: context, page: InAppView());
+        Navigation.push(page: InAppView());
       }
     }
   }

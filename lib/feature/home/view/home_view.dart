@@ -39,8 +39,7 @@ class _HomeScreenState extends State<HomeScreen> with HomeViewMixin {
         isBackIcon: false,
         isCenterTitle: true,
         isAction: true,
-        onMenuPressed: () =>
-            Navigation.push(context: context, page: SettingsView()),
+        onMenuPressed: () => Navigation.push(page: SettingsView()),
       ),
       body: Center(
         child: Column(

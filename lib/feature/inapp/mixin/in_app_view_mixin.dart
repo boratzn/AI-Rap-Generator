@@ -61,7 +61,7 @@ mixin InAppMixin<T extends StatefulWidget> on State<T> {
   Future<void> getPremium(BuildContext context) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setBool('isPremium', true);
-    Navigation.pushReplace(context: context, page: HomePageView());
+    Navigation.pushReplace(page: HomePageView());
   }
 
   Future<void> launchUrll() async {

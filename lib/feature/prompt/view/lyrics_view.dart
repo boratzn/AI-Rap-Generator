@@ -67,7 +67,6 @@ class _LyricsViewState extends State<LyricsView> {
                     GestureDetector(
                         onTap: () {
                           Navigation.push(
-                              context: context,
                               page: EditLyricsView(lyrics: temp ?? []));
                         },
                         child:
@@ -108,10 +107,9 @@ class _LyricsViewState extends State<LyricsView> {
                     : widget.lyric!;
                 context.read<LyricProvider>().setLyrics(temp);
                 Navigation.push(
-                    context: context,
                     page: BeatsView(
-                      lyric: temp,
-                    ));
+                  lyric: temp,
+                ));
               },
             ),
           )

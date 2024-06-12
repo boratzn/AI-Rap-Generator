@@ -55,10 +55,9 @@ class _EditLyricsViewState extends State<EditLyricsView> {
               onTap: () {
                 List<String>? editLyrics = controller.text.split('\n').toList();
                 Navigation.push(
-                    context: context,
                     page: LyricsView(
-                      editLyrics: editLyrics,
-                    ));
+                  editLyrics: editLyrics,
+                ));
               },
             )
           ],

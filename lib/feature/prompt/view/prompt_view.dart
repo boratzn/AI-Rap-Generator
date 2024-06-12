@@ -133,10 +133,9 @@ class _PromptViewState extends State<PromptView> with PromptViewMixin {
                     context.read<LyricBloc>().add(GenerateLyric(prompt: temp));
                     timerModel.startTimer();
                     Navigation.push(
-                        context: context,
                         page: GeneratingLyricsView(
-                          prompt: temp,
-                        ));
+                      prompt: temp,
+                    ));
                     controller.text = "";
                   })
             ],

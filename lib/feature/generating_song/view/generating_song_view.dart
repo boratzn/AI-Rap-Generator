@@ -56,12 +56,11 @@ class GeneratingSongView extends StatelessWidget {
                         isClicked: true,
                         onTap: () {
                           Navigation.push(
-                              context: context,
                               page: SongView(
-                                rapper: rapper,
-                                track: track,
-                                song: song.song,
-                              ));
+                            rapper: rapper,
+                            track: track,
+                            song: song.song,
+                          ));
                         }));
               }
               return Container();

@@ -54,9 +54,7 @@ class _GeneratingLyricsViewState extends State<GeneratingLyricsView> {
                     child: CustomButton(
                       isClicked: true,
                       onTap: () {
-                        Navigation.push(
-                            context: context,
-                            page: LyricsView(lyric: state.lyric));
+                        Navigation.push(page: LyricsView(lyric: state.lyric));
                       },
                     ),
                   );

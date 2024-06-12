@@ -42,7 +42,7 @@ class _SettingsViewState extends State<SettingsView> {
                       await launchUrll();
                     }
                   } else {
-                    Navigation.push(context: context, page: option.page!);
+                    Navigation.push(page: option.page!);
                   }
                 },
               );

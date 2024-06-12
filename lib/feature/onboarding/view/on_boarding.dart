@@ -59,7 +59,7 @@ class _OnBoardingState extends State<OnBoardingView> with OnbOardingMixin {
                         await SharedPreferences.getInstance();
                     await prefs.setBool('seenOnboarding', true);
                     await prefs.setInt('freeTrial', 2);
-                    Navigation.pushReplace(context: context, page: InAppView());
+                    Navigation.pushReplace(page: InAppView());
                   }
                   pageController.nextPage(
                       duration: Duration(milliseconds: 500),

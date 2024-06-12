@@ -102,9 +102,7 @@ class _BeatsViewState extends State<BeatsView> with BeatsViewMixin {
                       isClicked: isClicked,
                       onTap: () async {
                         await player.stop();
-                        Navigation.push(
-                            context: context,
-                            page: RapperView(beat: selectedBeat));
+                        Navigation.push(page: RapperView(beat: selectedBeat));
                       },
                     ),
                   ),
