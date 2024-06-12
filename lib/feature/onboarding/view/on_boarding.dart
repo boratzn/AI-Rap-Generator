@@ -3,6 +3,7 @@ import 'package:ai_rap_generator/feature/onboarding/mixin/onboarding_mixin.dart'
 import 'package:ai_rap_generator/feature/onboarding/viewmodel/onboarding_viewmodel.dart';
 import 'package:ai_rap_generator/product/index.dart';
 import 'package:ai_rap_generator/product/navigation/navigation_service.dart';
+import 'package:ai_rap_generator/product/utility/extension/num_extension.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -46,9 +47,7 @@ class _OnBoardingState extends State<OnBoardingView> with OnbOardingMixin {
               },
             ),
           ),
-          SizedBox(
-            height: 37,
-          ),
+          37.height,
           Expanded(
             flex: 1,
             child: Padding(

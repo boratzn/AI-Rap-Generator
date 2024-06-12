@@ -2,6 +2,7 @@ import 'package:ai_rap_generator/feature/settings/view/settings_view.dart';
 import 'package:ai_rap_generator/feature/song_creator/mixin/song_view_mixin.dart';
 import 'package:ai_rap_generator/product/index.dart';
 import 'package:ai_rap_generator/product/navigation/navigation_service.dart';
+import 'package:ai_rap_generator/product/utility/extension/num_extension.dart';
 import 'package:ai_rap_generator/product/widgets/song_view/custom_fab.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
@@ -45,9 +46,7 @@ class _SongsViewState extends State<SongCreatorView> with SongViewMixin {
                       style: customTextStyle,
                     ),
                   ),
-                  SizedBox(
-                    height: 13,
-                  ),
+                  13.height,
                   BlocBuilder<HiveBloc, HiveState>(
                     builder: (context, state) {
                       if (state is HiveInitial) {

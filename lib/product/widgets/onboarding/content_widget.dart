@@ -1,5 +1,6 @@
 import 'package:ai_rap_generator/product/index.dart';
 import 'package:ai_rap_generator/product/model/onboarding.dart';
+import 'package:ai_rap_generator/product/utility/extension/num_extension.dart';
 import 'package:flutter/material.dart';
 
 /// Content widget for the onboarding page
@@ -30,9 +31,7 @@ class ContentWidget extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
         ),
-        SizedBox(
-          height: 20,
-        ),
+        20.height,
         SizedBox(
           height: 120,
           width: 314,
@@ -45,9 +44,7 @@ class ContentWidget extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
         ),
-        SizedBox(
-          height: 20,
-        ),
+        20.height,
       ],
     );
   }
