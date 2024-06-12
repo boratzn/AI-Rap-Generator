@@ -61,14 +61,14 @@ class _HomeScreenState extends State<HomeScreen> with HomeViewMixin {
                 ),
               ),
             ),
-            lowSizedBox(context),
+            context.lowHeightSB,
             Text(
               title,
               style: context.textTheme.headlineLarge!.copyWith(
                   color: Color(0xFFA9A9A9),
                   fontFamily: FontFamily.poppinsRegular),
             ),
-            lowSizedBox(context),
+            context.lowHeightSB,
             Text(
               subTitle,
               style: context.textTheme.headlineSmall!.copyWith(
