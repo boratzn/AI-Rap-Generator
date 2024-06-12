@@ -48,15 +48,15 @@ mixin SongViewMixin<T extends StatefulWidget> on State<T> {
     int count = prefs.getInt('freeTrial') ?? 2;
     bool isPremium = prefs.getBool('isPremium') ?? false;
     if (isPremium) {
-      Navigation.push(context: context, page: PromptView());
+      Navigation.push(page: PromptView());
     } else {
       if (count > 0) {
-        Navigation.push(context: context, page: PromptView());
+        Navigation.push(page: PromptView());
       } else {
         showToast(
             message:
                 'You just can create 2 songs. You need premium account to create unlimited songs');
-        Navigation.push(context: context, page: InAppView());
+        Navigation.push(page: InAppView());
       }
     }
   }

@@ -27,8 +27,7 @@ class _SongsViewState extends State<SongCreatorView> with SongViewMixin {
         isCenterTitle: true,
         title: appBarTitle,
         isAction: true,
-        onMenuPressed: () =>
-            Navigation.push(context: context, page: SettingsView()),
+        onMenuPressed: () => Navigation.push(page: SettingsView()),
       ),
       body: Padding(
         padding: padding,

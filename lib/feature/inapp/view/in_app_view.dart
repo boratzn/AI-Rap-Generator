@@ -28,8 +28,7 @@ class _InAppViewState extends State<InAppView> with InAppMixin {
           color: Color(0xFF010101),
         ),
         isAction: true,
-        onMenuPressed: () =>
-            Navigation.pushReplace(context: context, page: HomePageView()),
+        onMenuPressed: () => Navigation.pushReplace(page: HomePageView()),
       ),
       body: Stack(
         children: [

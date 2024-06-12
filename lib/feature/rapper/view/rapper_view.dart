@@ -79,7 +79,6 @@ class _RapperViewState extends State<RapperView> with RapperViewMixin {
                               voiceModelUuid: selectedRapper.voicemodelUuid!,
                               lyricsData: lyrics));
                           Navigation.push(
-                              context: context,
                               page: GeneratingSongView(
                                   rapper: selectedRapper, track: widget.beat));
                         },
